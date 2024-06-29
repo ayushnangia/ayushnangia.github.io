@@ -40,3 +40,21 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+
+document.querySelectorAll('header nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// Add hover effect for profession box
+const professionBox = document.querySelector('.profession-box');
+professionBox.addEventListener('mouseover', () => {
+    professionBox.style.animationPlayState = 'paused';
+});
+professionBox.addEventListener('mouseout', () => {
+    professionBox.style.animationPlayState = 'running';
+});
