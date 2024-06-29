@@ -41,16 +41,16 @@ ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .cont
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
 
-document.querySelectorAll('header nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// Add hover effect for profession box
+// Pause rotation on hover
 const professionBox = document.querySelector('.profession-box');
 professionBox.addEventListener('mouseover', () => {
     professionBox.style.animationPlayState = 'paused';
@@ -58,3 +58,4 @@ professionBox.addEventListener('mouseover', () => {
 professionBox.addEventListener('mouseout', () => {
     professionBox.style.animationPlayState = 'running';
 });
+
