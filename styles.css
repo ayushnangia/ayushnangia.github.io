@@ -87,10 +87,11 @@ section {
 .home {
     display: flex;
     align-items: center;
+    padding: 0 10%;
 }
 
-.home .home-content {
-    max-width: 44rem;
+.home-content {
+    max-width: 600px;
 }
 
 .home-content h3 {
@@ -108,33 +109,7 @@ section {
 .home-content p {
     font-size: 1.6rem;
 }
-.social-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border: .2rem solid var(--white-color);
-    border-radius: 50%;
-    box-shadow: 0 .2rem .5rem var(--shadow-color);
-    margin: 2.5rem 1.5rem 3rem 0;
-    transition: .5s ease-in-out;
-}
 
-.social-icon:hover {
-    background: var(--main-color);
-}
-
-.hf-icon {
-    width: 2.4rem;
-    height: 2.4rem;
-    filter: invert(1);
-}
-
-.social-icon:hover .hf-icon {
-    filter: none;
-}
 .home-content .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -142,18 +117,17 @@ section {
     width: 4rem;
     height: 4rem;
     background: transparent;
-    border: .2rem solid var(--white-color);
+    border: .2rem solid var(--main-color);
     border-radius: 50%;
-    box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 2rem;
     color: var(--main-color);
     margin: 2.5rem 1.5rem 3rem 0;
-    transition: .5s ease-in-out;
+    transition: .5s ease;
 }
 
 .home-content .social-media a:hover {
     background: var(--main-color);
-    color: var(--white-color);
+    color: var(--bg-color);
 }
 
 .btn {
@@ -167,7 +141,7 @@ section {
     letter-spacing: .1rem;
     font-weight: 600;
     border: .2rem solid transparent;
-    transition: .5s ease-in-out;
+    transition: .5s ease;
 }
 
 .btn:hover {
@@ -194,11 +168,28 @@ section {
     width: 768px;
     height: 768px;
     border-radius: 50%;
-     /* Adjusted to match the green circle in the image */
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 13s ease-out infinite; 
+    animation: professionRotate 13s ease-out infinite;
+}
+
+@keyframes professionRotate {
+    0%, 20% {
+        transform: rotate(0deg);
+    }
+    25%, 45% {
+        transform: rotate(-90deg);
+    }
+    50%, 70% {
+        transform: rotate(-180deg);
+    }
+    75%, 95% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .home .profession-box .profession {
@@ -207,13 +198,11 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: lightblue; /* Adjusted to match the blue text in the image */
+    color: var(--main-color);
     transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
     background: var(--bg-color);
     padding: 13px 0;
-
-
 }
 
 .home .profession i {
@@ -239,33 +228,27 @@ section {
     border-left: 384px solid transparent;
 }
 
-@keyframes professionRotate {
-    0%,20%{
-        transform: rotate(0deg);
-
-    }
-    25%,45%{
-        transform: rotate(-90deg);
-        
-    }
-    50%,70%{
-        transform: rotate(-180deg);
-        
-    }
-    75%,95%{
-        transform: rotate(-270deg);
-        
-    }
-    100%{
-        transform: rotate(-360deg);
-        
-    }
+.home-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
 }
 
-span {
-    color: var(--main-color);
+.home-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.8;
 }
-
 .about {
     display: flex;
     justify-content: center;
@@ -296,6 +279,7 @@ span {
     min-height: auto;
     padding-bottom: 7rem;
 }
+
 .experience .experience-container {
     display: flex;
     justify-content: center;
@@ -305,9 +289,7 @@ span {
 }
 
 .experience-container .experience-box {
-    flex: 0 1 30rem; /* Set flex-grow to 0 to prevent stretching */
-    width: 50rem; /* Set a fixed width */
-    height: 30rem; /* Set a fixed height */
+    flex: 0 1 30rem;
     background: var(--bg-color);
     padding: 3rem 2rem;
     border-radius: 2rem;
@@ -316,13 +298,7 @@ span {
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
     transition: .5s ease-in;
-    overflow: hidden; /* Hide overflow text */
-    display: flex; /* Ensure flex layout for content alignment */
-    flex-direction: column; /* Align children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
 }
-
 
 .experience-container .experience-box:hover {
     box-shadow: 0 .1rem 2rem var(--shadow-color);
@@ -344,6 +320,7 @@ span {
     font-size: 1.6rem;
     margin-top: 1rem;
 }
+
 .projects {
     min-height: auto;
     padding-bottom: 7rem;
@@ -445,8 +422,6 @@ span {
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
     transition: .5s ease;
-    width: 20rem; /* Set a fixed width */
-    height: 30rem; 
 }
 
 .skills-container .skills-box:hover {
@@ -545,7 +520,6 @@ span {
     color: #333;
 }
 
-/* BREAKPOINTS */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -618,14 +592,6 @@ span {
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
-    }
-
-    #dark {
-        position: absolute;
-        right: 7rem;
-        font-size: 2.6rem;
-        color: var(--text-color);
-        margin-bottom: .1rem;
     }
 
     .navbar {
@@ -767,10 +733,6 @@ span {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
-    }
-
-    #dark {
-        right: 6rem;
     }
 
     .home {
