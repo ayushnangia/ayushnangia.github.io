@@ -194,9 +194,11 @@ section {
     width: 768px;
     height: 768px;
     border-radius: 50%;
+     /* Adjusted to match the green circle in the image */
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: professionRotate 13s ease-out infinite; 
 }
 
 .home .profession-box .profession {
@@ -205,11 +207,13 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: var(--main-color);
+    color: lightblue; /* Adjusted to match the blue text in the image */
+    transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
     background: var(--bg-color);
     padding: 13px 0;
-    transition: 0.5s;
+
+
 }
 
 .home .profession i {
@@ -218,7 +222,7 @@ section {
 }
 
 .home .profession h3 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     line-height: 1;
     font-weight: 600;
 }
@@ -236,11 +240,25 @@ section {
 }
 
 @keyframes professionRotate {
-    0%, 20% {
+    0%,20%{
         transform: rotate(0deg);
+
     }
-    100% {
+    25%,45%{
+        transform: rotate(-90deg);
+        
+    }
+    50%,70%{
+        transform: rotate(-180deg);
+        
+    }
+    75%,95%{
+        transform: rotate(-270deg);
+        
+    }
+    100%{
         transform: rotate(-360deg);
+        
     }
 }
 
@@ -278,7 +296,6 @@ span {
     min-height: auto;
     padding-bottom: 7rem;
 }
-
 .experience .experience-container {
     display: flex;
     justify-content: center;
@@ -288,16 +305,24 @@ span {
 }
 
 .experience-container .experience-box {
-    flex: 1 1 30rem;
+    flex: 0 1 30rem; /* Set flex-grow to 0 to prevent stretching */
+    width: 50rem; /* Set a fixed width */
+    height: 30rem; /* Set a fixed height */
     background: var(--bg-color);
-    padding: 3rem 2rem 4rem;
+    padding: 3rem 2rem;
     border-radius: 2rem;
     box-shadow: 0 .1rem .5rem var(--shadow-color);
     text-align: center;
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
     transition: .5s ease-in;
+    overflow: hidden; /* Hide overflow text */
+    display: flex; /* Ensure flex layout for content alignment */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
+
 
 .experience-container .experience-box:hover {
     box-shadow: 0 .1rem 2rem var(--shadow-color);
@@ -420,6 +445,8 @@ span {
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
     transition: .5s ease;
+    width: 20rem; /* Set a fixed width */
+    height: 30rem; 
 }
 
 .skills-container .skills-box:hover {
