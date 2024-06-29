@@ -773,13 +773,18 @@ section {
 
 .home {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 10%;
     background: #0b061f;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .home-content {
     max-width: 600px;
+    text-align: center;
     z-index: 1;
 }
 
@@ -799,6 +804,11 @@ section {
 .home-content p {
     font-size: 1.6rem;
     color: #ffffff;
+    margin-top: 2rem;
+}
+
+.home-content .social-media {
+    margin-top: 3rem;
 }
 
 .home-content .social-media a {
@@ -812,7 +822,7 @@ section {
     border-radius: 50%;
     font-size: 2rem;
     color: #b3e0ff;
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 0 1rem;
     transition: .5s ease;
 }
 
@@ -821,11 +831,32 @@ section {
     color: #0b061f;
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1.2rem 2.8rem;
+    background: #b3e0ff;
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .2);
+    font-size: 1.6rem;
+    color: #0b061f;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    border: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #b3e0ff;
+    border-color: #b3e0ff;
+}
+
 .profession-container {
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 768px;
     height: 768px;
     overflow: hidden;
@@ -836,8 +867,8 @@ section {
     position: absolute;
     top: 0;
     right: 0;
-    width: 768px;
-    height: 768px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -852,10 +883,10 @@ section {
     align-items: center;
     flex-direction: column;
     color: #b3e0ff;
-    transform: rotate(calc(360deg / 4 * var(--i)));
-    transform-origin: 384px;
+    transform: rotate(calc(360deg / 4 * var(--i))) translateX(250px);
     background: #0b061f;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .profession-box .profession i {
@@ -864,7 +895,7 @@ section {
 }
 
 .profession-box .profession h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1;
     font-weight: 600;
     margin-top: 10px;
@@ -888,4 +919,19 @@ section {
     50%, 70% { transform: rotate(-180deg); }
     75%, 95% { transform: rotate(-270deg); }
     100% { transform: rotate(-360deg); }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 0 2rem;
+    }
+    
+    .profession-container {
+        width: 100%;
+        height: 100vw;
+    }
+    
+    .profession-box .profession {
+        transform: rotate(calc(360deg / 4 * var(--i))) translateX(120px);
+    }
 }
