@@ -7,6 +7,13 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+var typingEffect = new Typed(".typedText",{
+    strings : ["ML Intern","Undergrad Researcher","Engineering Student"],
+    loop : true,
+    typeSpeed : 100, 
+    backSpeed : 80,
+    backDelay : 2000
+ })
 
 window.onscroll = () => {
     sections.forEach(sec => {
