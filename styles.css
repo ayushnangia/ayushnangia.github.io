@@ -328,6 +328,8 @@ span {
     text-align: center;
     border-top: .6rem solid var(--main-color);
     border-bottom: .6rem solid var(--main-color);
+    border-right: .6rem solid var(--main-color);
+    border-left:.6rem solid var(--main-color) ;
     transition: .5s ease-in;
     overflow: hidden; /* Hide overflow text */
     display: flex; /* Ensure flex layout for content alignment */
