@@ -200,20 +200,6 @@ section {
     pointer-events: none;
 }
 
-.home .profession-container .profession-box {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 768px;
-    height: 768px;
-    border-radius: 50%;
-     /* Adjusted to match the green circle in the image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: professionRotate 13s ease-out infinite; 
-}
-
 .home .profession-box .profession {
     position: absolute;
     left: 0;
@@ -221,12 +207,9 @@ section {
     align-items: center;
     flex-direction: column;
     color: lightblue; /* Adjusted to match the blue text in the image */
-    transform: rotate(calc(360deg / 4 * var(--i)));
     transform-origin: 384px;
     background: var(--bg-color);
     padding: 13px 0;
-
-
 }
 
 .home .profession i {
@@ -239,42 +222,6 @@ section {
     line-height: 1;
     font-weight: 600;
 }
-
-.home .profession-container .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 384px solid var(--main-color);
-    border-right: 384px solid var(--main-color);
-    border-bottom: 384px solid var(--main-color);
-    border-left: 384px solid transparent;
-}
-
-@keyframes professionRotate {
-    0%,20%{
-        transform: rotate(0deg);
-
-    }
-    25%,45%{
-        transform: rotate(-90deg);
-        
-    }
-    50%,70%{
-        transform: rotate(-180deg);
-        
-    }
-    75%,95%{
-        transform: rotate(-270deg);
-        
-    }
-    100%{
-        transform: rotate(-360deg);
-        
-    }
-}
-
 span {
     color: var(--main-color);
 }
