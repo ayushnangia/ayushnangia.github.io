@@ -4,58 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayush Nangia - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <a href='#' class="logo">Portfolio</a>
+        <a href="#" class="logo">Portfolio</a>
+
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>  
-            <a href="#about">About</a>  
-            <a href="#experience">Experience</a>  
-            <a href="#projects">Projects</a>  
-            <a href="#skills">Skills</a>  
-            <a href="#contact">Contact</a>      
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
         </nav>
-        <div class='bx bx-menu' id="menu-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section class="home" id="home">
+    <section class="home section" id="home">
         <div class="home-content">
             <h3>Hello, I am</h3>
             <h1>Ayush Nangia</h1>
-                        <div class="featured-name">
-                <p> <span class="typedText"></span></p>
+            <div class="featured-name">
+                <span class="typedText"></span>
             </div>
-            
             <div class="social-media">
-                <a href="https://github.com/ayushnangia"><i class='bx bxl-github'></i></a>
-                <a href="https://linkedin.com/in/ayush-nangia"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://huggingface.co/Ayushnangia"><i class='bx bx-happy-beaming'></i></a>
-           </div>
-            <a href="#" class="btn">Download Resume</a>
-        </div>
-
-                
-                <!-- Add or remove profession divs as needed -->
+                <a href="https://github.com/ayushnangia" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://linkedin.com/in/ayush-nangia" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://huggingface.co/Ayushnangia" target="_blank"><i class='bx bx-code-alt'></i></a>
             </div>
-            <div class="overlay"></div>
+            <a href="#" class="btn">Download Resume</a>
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about section" id="about">
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
+            <h2 class="heading">About Me</h2>
             <h3>Aspiring Machine Learning Engineer and AI Researcher</h3>
-            <p>Hey! I'm a dedicated Computer Engineering student specializing in Machine Learning and AI. I'm passionate about applying innovative technology to real-world problems in multiple domains. my goal is to contribute to the advancement of technology by applying my skills in Machine Learning and AI to create impactful, multi-domain applications</p>
+            <p>Hey! I'm a dedicated Computer Engineering student specializing in Machine Learning and AI. I'm passionate about applying innovative technology to real-world problems in multiple domains. My goal is to contribute to the advancement of technology by applying my skills in Machine Learning and AI to create impactful, multi-domain applications.</p>
             <a href="#" class="btn">Read More</a>
         </div>
     </section>
 
-    <section class="experience" id="experience">
-        <h2 class="heading">My <span>Experience</span></h2>
+    <section class="experience section" id="experience">
+        <h2 class="heading">My Experience</h2>
         <div class="experience-container">
             <div class="experience-box">
                 <h3>Visiting Researcher</h3>
@@ -75,24 +69,24 @@
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
+    <section class="projects section" id="projects">
+        <h2 class="heading">My Projects</h2>
         <div class="projects-container">
             <div class="project-box">
-                <h4>Open Translation and OCR Toolkit</h4>
+                <h3>Open Translation and OCR Toolkit</h3>
                 <p>Integrated DocTr and Tesseract for trilingual support with LLM-based checking and translation</p>
-                <a href="#"><i class='bx bx-link-alt'></i></a>
+                <a href="#" class="btn">Learn More</a>
             </div>
             <div class="project-box">
-                <h4>Infant Vitality Watch</h4>
+                <h3>Infant Vitality Watch</h3>
                 <p>Deployed IoT technology to track vital signatures in neonatal patients, using ML models for diagnosis</p>
-                <a href="#"><i class='bx bx-link-alt'></i></a>
+                <a href="#" class="btn">Learn More</a>
             </div>
         </div>
     </section>
 
-    <section class="skills" id="skills">
-        <h2 class="heading">Technical <span>Skills</span></h2>
+    <section class="skills section" id="skills">
+        <h2 class="heading">Technical Skills</h2>
         <div class="skills-container">
             <div class="skills-box">
                 <h3>Programming Languages</h3>
@@ -109,18 +103,11 @@
         </div>
     </section>
 
-
-
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by Ayush Nangia | All Rights Reserved</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
+    <footer>
+        <p class="footer-text">Copyright © 2024 by Ayush Nangia | All Rights Reserved</p>
+        <a href="#home" class="footer-iconTop"><i class='bx bx-up-arrow-alt'></i></a>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
 </html>
