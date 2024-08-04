@@ -450,3 +450,8 @@ footer {
         margin-top: 2rem;
     }
 }
+.social-media a svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
