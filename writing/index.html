@@ -1,0 +1,34 @@
+---
+title: Writing
+permalink: /writing/
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Writing by Ayush Nangia on AI research and other interests.">
+  <meta property="og:title" content="Writing · Ayush Nangia">
+  <meta property="og:description" content="Writing by Ayush Nangia on AI research and other interests.">
+  <meta property="og:type" content="website">
+  <title>Writing · Ayush Nangia</title>
+  <link rel="canonical" href="https://ayushnangia.github.io/writing/">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="page writing-page">
+    <a class="back-link" href="/">← Ayush Nangia</a>
+    <h1>Writing</h1>
+    <ul class="highlights">
+      {% for post in site.posts %}
+      <li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y %b' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+      {% endfor %}
+      <li><time datetime="2025-03-08">2025 Mar</time><a href="https://vitransformer.netlify.app/posts/lets-talk-about-agi/">Let's talk about A(G)I</a></li>
+      <li><time datetime="2025-02-28">2025 Feb</time><a href="https://vitransformer.netlify.app/posts/peeking-inside-the-ai-brain/">Peeking Inside the AI Brain</a></li>
+      <li><time datetime="2025-02-12">2025 Feb</time><a href="https://vitransformer.netlify.app/posts/encoder-explanatory-decoder/">Encoder + Explanatory Decoder</a></li>
+      <li><time datetime="2025-02-06">2025 Feb</time><a href="https://vitransformer.netlify.app/posts/vision-transformers-meet-prototypical-parts/">Vision Transformers Meet Prototypical Parts</a></li>
+      <li><time datetime="2025-02-02">2025 Feb</time><a href="https://vitransformer.netlify.app/posts/from-sputnik-to-silicon/">From Sputnik to Silicon</a></li>
+    </ul>
+  </main>
+</body>
+</html>
