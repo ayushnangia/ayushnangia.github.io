@@ -28,15 +28,14 @@
         <p>If you're working on agent evaluations or post-training, <a href="mailto:nangia@cs.toronto.edu">get in touch</a>.</p>
         <p class="profiles"><a href="https://x.com/vitransformer">X</a><span>/</span><a href="https://github.com/ayushnangia">GitHub</a><span>/</span><a href="https://www.linkedin.com/in/ayush-nangia/">LinkedIn</a></p>
       </div>
+      {% if site.data.dicta.size > 0 %}
+      <aside class="dictum" aria-labelledby="dictum-heading">
+        <h2 id="dictum-heading">Dictum of the day</h2>
+        <blockquote id="dictum-text">{{ site.data.dicta[0].text | escape }}</blockquote>
+        <p class="dictum-source" id="dictum-source"{% unless site.data.dicta[0].source %} hidden{% endunless %}>{{ site.data.dicta[0].source | escape }}</p>
+      </aside>
+      {% endif %}
     </div>
-
-    {% if site.data.dicta.size > 0 %}
-    <section class="dictum" aria-labelledby="dictum-heading">
-      <h2 id="dictum-heading">Dictum of the day</h2>
-      <blockquote id="dictum-text">{{ site.data.dicta[0].text | escape }}</blockquote>
-      <p class="dictum-source" id="dictum-source"{% unless site.data.dicta[0].source %} hidden{% endunless %}>{{ site.data.dicta[0].source | escape }}</p>
-    </section>
-    {% endif %}
 
     <section aria-labelledby="work-heading">
       <h2 id="work-heading">Work</h2>
