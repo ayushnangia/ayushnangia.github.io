@@ -1,115 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Nangia - Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ayush Nangia works on agent evaluation, post-training, and AI safety.">
+  <meta name="author" content="Ayush Nangia">
+  <meta property="og:title" content="Ayush Nangia">
+  <meta property="og:description" content="Agent evaluation, post-training, and AI safety.">
+  <meta property="og:type" content="website">
+  <title>Ayush Nangia</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+  <main class="page">
+    <h1>Ayush Nangia</h1>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-        </nav>
+    <div class="introduction">
+      <img class="portrait" src="images/ayush.png" alt="Illustrated portrait of Ayush Nangia" width="220" height="220">
+      <div class="bio">
+        <p>I work on agent evaluation and post-training, with a focus on long-horizon tasks.</p>
+        <p>Currently, I'm a <a href="https://www.sparai.org/">SPAR fellow</a> and work with <a href="https://zhijing-jin.com/home/">Jinesis AI Lab</a> on post-training and AI safety.</p>
+        <p>In the past, I have done research at <a href="https://www.proximal.ai/">Proximal</a>, <a href="https://lossfunk.com/">Lossfunk</a>, <a href="https://www.torontomu.ca/">Toronto Metropolitan University</a> through <a href="https://www.mitacs.ca/our-programs/globalink-research-internship/">Mitacs</a>, and <a href="https://www.wadhwaniai.org/">Wadhwani AI</a>.</p>
+        <p>If you're working on agent evaluations or post-training, <a href="mailto:nangia@cs.toronto.edu">get in touch</a>.</p>
+        <p class="profiles"><a href="https://github.com/ayushnangia">GitHub</a><span>/</span><a href="https://huggingface.co/Ayushnangia">Hugging Face</a></p>
+      </div>
+    </div>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </header>
-
-    <section class="home section" id="home">
-        <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1>Ayush Nangia</h1>
-            <div class="featured-name">
-                <span class="typedText"></span>
-            </div>
-            <div class="social-media">
-                <a href="https://github.com/ayushnangia" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://linkedin.com/in/ayush-nangia" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://huggingface.co/Ayushnangia" target="_blank">
-                    <img src="hf-logo-pirate.svg" alt="HuggingFace" width="22" height="22">
-                </a>
-            </div>
-                        <a href="#" class="btn">Download Resume</a>
-        </div>
+    <section aria-labelledby="work-heading">
+      <h2 id="work-heading">Work</h2>
+      <ul class="highlights">
+        <li><time datetime="2026-09">2026 Sep</time><a href="https://www.frontierswe.com/blog/v2">FrontierSWE v2</a></li>
+        <li><time datetime="2026-02">2026 Feb</time><a href="https://arxiv.org/abs/2602.19594">ISO-Bench: Can Coding Agents Optimize Real-World Inference Workloads?</a></li>
+        <li><time datetime="2026">2026</time><a href="https://aclanthology.org/2026.mme-main.10/">UNSC-Bench: Evaluating LLM Diplomatic Role-Playing</a></li>
+        <li><time datetime="2026">2026</time><span>Entropy Collapse in Agentic Social Media</span></li>
+        <li><time datetime="2024">2024</time><a href="https://link.springer.com/chapter/10.1007/978-3-031-80871-5_5">Multi-stage Segmentation of Diabetic Foot Ulcers Using Self-supervised Learning</a></li>
+      </ul>
     </section>
 
-    <section class="about section" id="about">
-        <div class="about-content">
-            <h2 class="heading">About Me</h2>
-            <h3>Aspiring ML Engineer and AI Researcher</h3>
-            <p>Hey! I'm a dedicated Computer Engineering student specializing in Machine Learning and AI. I'm passionate about applying innovative technology to real-world problems in multiple domains. My goal is to contribute to the advancement of technology by applying my skills in Machine Learning and AI to create impactful, multi-domain applications.</p>
-            <a href="#" class="btn">Read More</a>
-        </div>
-    </section>
-
-    <section class="experience section" id="experience">
-        <h2 class="heading">My Experience</h2>
-        <div class="experience-container">
-            <div class="experience-box">
-                <h3>Visiting Researcher</h3>
-                <h4>MITACS Globalink, Toronto Metropolitan University</h4>
-                <p>Developing explainable AI platform for neonatal ultrasound diagnosis</p>
-            </div>
-            <div class="experience-box">
-                <h3>Machine Learning Intern</h3>
-                <h4>Panjab Digital Library</h4>
-                <p>Analyzed over 10,000 documents, trained LLMs, and developed a multi-modal GUI</p>
-            </div>
-            <div class="experience-box">
-                <h3>ELC Summer Intern</h3>
-                <h4>Infant Vitality Watch, TIET</h4>
-                <p>Led a team to enhance research proficiency and implement ML techniques in healthcare</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects section" id="projects">
-        <h2 class="heading">My Projects</h2>
-        <div class="projects-container">
-            <div class="project-box">
-                <h3>Open Translation and OCR Toolkit</h3>
-                <p>Integrated DocTr and Tesseract for trilingual support with LLM-based checking and translation</p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-            <div class="project-box">
-                <h3>Infant Vitality Watch</h3>
-                <p>Deployed IoT technology to track vital signatures in neonatal patients, using ML models for diagnosis</p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills section" id="skills">
-        <h2 class="heading">Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skills-box">
-                <h3>Programming Languages</h3>
-                <p>C/C++, Python, SQL, Bash, HTML, CSS, JS</p>
-            </div>
-            <div class="skills-box">
-                <h3>Frameworks & Libraries</h3>
-                <p>TensorFlow, PyTorch, OpenCV, Numpy, Matplotlib, Pandas</p>
-            </div>
-            <div class="skills-box">
-                <h3>Platforms</h3>
-                <p>MATLAB, HuggingFace, R Studio, Vim</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p class="footer-text">Copyright © 2024 by Ayush Nangia | All Rights Reserved</p>
-        <a href="#home" class="footer-iconTop"><i class='bx bx-up-arrow-alt'></i></a>
-    </footer>
-
-    <script src="script.js"></script>
+  </main>
 </body>
 </html>
