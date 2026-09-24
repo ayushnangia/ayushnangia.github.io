@@ -16,7 +16,7 @@ button.click();
 assert.equal(portrait.src, '/images/ayush-llama.jpg');
 assert.equal(portrait.alt, 'Ayush Nangia standing beside a llama');
 assert.equal(button['aria-label'], 'Show serious photo');
-assert.equal(mouth.path, 'M8 15h8');
+assert.equal(mouth.path, 'M7 13.5c2 4 8 4 10 0');
 button.click();
 assert.equal(portrait.src, '/images/ayush-serious.jpg');
 assert.equal(portrait.alt, 'Portrait of Ayush Nangia');
