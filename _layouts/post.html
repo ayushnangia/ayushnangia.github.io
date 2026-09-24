@@ -20,8 +20,32 @@
         <h1>{{ page.title | escape }}</h1>
         <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time>
       </header>
+      <nav class="toc" aria-label="Contents" hidden><details><summary>Contents</summary><ol></ol></details></nav>
       <div class="prose">{{ content }}</div>
+      {% if page.tags.size > 0 %}<p class="post-tags">{{ page.tags | join: ' · ' }}</p>{% endif %}
+      <nav class="post-nav" aria-label="Other writing">
+        {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title | escape }}</a>{% endif %}
+        {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} →</a>{% endif %}
+      </nav>
     </article>
   </main>
+  <script>
+    const headings = [...document.querySelectorAll('.prose h1, .prose h2, .prose h3')];
+    if (headings.length > 2) {
+      const toc = document.querySelector('.toc');
+      const list = toc.querySelector('ol');
+      headings.forEach((heading, index) => {
+        if (!heading.id) heading.id = `section-${index + 1}`;
+        const item = document.createElement('li');
+        item.className = `toc-${heading.tagName.toLowerCase()}`;
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.textContent;
+        item.append(link);
+        list.append(item);
+      });
+      toc.hidden = false;
+    }
+  </script>
 </body>
 </html>

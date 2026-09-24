@@ -18,6 +18,6 @@ math: true
 Your writing here.
 ```
 
-GitHub Pages builds the post and adds it to `/writing/` automatically. Omit `math: true` for posts without equations. Use fenced code blocks, descriptive image alt text, and links to sources as needed. The older ViTransformer posts are linked from the writing index; their text remains on the original site.
+GitHub Pages builds the post and adds it to `/writing/` automatically. Omit `math: true` for posts without equations. Use fenced code blocks, descriptive image alt text, and links to sources as needed. The seven 2025 posts were migrated from Ayush's ViTransformer blog, with their original dates, text, and referenced images.
 
 The layout is adapted from [Yuhui Zhang’s Minimal Academic Website Template](https://github.com/yuhui-zh15/Minimal-Academic-Website/); its MIT license is retained in `LICENSE`.
