@@ -9,7 +9,7 @@
   <meta property="og:type" content="article">
   <title>{{ page.title | escape }} · Ayush Nangia</title>
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v={{ site.time | date: '%s' }}">
   <link rel="alternate" type="application/atom+xml" title="Writing · Ayush Nangia" href="/feed.xml">
   {% if page.math %}<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>{% endif %}
 </head>
