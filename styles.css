@@ -5,7 +5,7 @@ body{margin:0;background:#f1efe9;color:var(--ink);font:17px/1.52 Georgia,'Times 
 h1{max-width:950px;font-size:34px;line-height:1.2;font-style:italic;font-weight:400;margin:0 auto 42px;letter-spacing:-.02em}
 a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 a:hover{color:#152e43}
-a:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+a:focus-visible,.toc summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
 .introduction{display:grid;grid-template-columns:220px minmax(0,1fr);gap:26px;max-width:950px;margin:0 auto}
 .portrait{display:block;width:220px;height:220px;object-fit:cover;object-position:center}
 .bio p{margin:0 0 17px}.bio p:first-child{margin-top:0}.bio .profiles{margin-top:27px}
