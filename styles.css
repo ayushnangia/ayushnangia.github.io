@@ -3,6 +3,7 @@
 body{margin:0;background:#f1efe9;color:var(--ink);font:17px/1.52 Georgia,'Times New Roman',serif}
 .page{max-width:1120px;margin:0 auto;padding:37px 58px 48px}
 h1{max-width:950px;font-size:34px;line-height:1.2;font-style:italic;font-weight:400;margin:0 auto 42px;letter-spacing:-.02em}
+.site-header{max-width:950px;margin:0 auto 42px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}.site-header h1{margin:0}.mode-toggle{flex:none;border:0;padding:4px 0;background:none;color:var(--link);font:14px Georgia,'Times New Roman',serif;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
 a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 a:hover{color:#152e43}
 a:focus-visible,.toc summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
@@ -17,8 +18,8 @@ section{max-width:950px;margin:32px auto 0;padding-left:246px}
 h2{font-size:18px;font-weight:700;margin:0 0 13px}
 .highlights{margin:0;padding:0;list-style:none}.highlights li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:4px;margin:0 0 4px;line-height:1.42}.highlights time{color:var(--muted);font-size:14px;white-space:nowrap}.highlights span{color:var(--ink)}
 .more-link{margin:12px 0 0;font-size:15px}
-@media(max-width:740px){.page{padding:28px 22px 38px}h1{margin-bottom:27px}.home-grid{display:block}.introduction{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-areas:"portrait bio" ". dictum";column-gap:20px}.portrait{grid-area:portrait;width:120px;height:120px}.bio{grid-area:bio}.dictum{grid-area:dictum}.home-grid>section{margin-top:24px;padding-left:140px}}
-@media(max-width:560px){.page{padding:25px 19px 34px}h1{font-size:30px;margin-bottom:23px}.introduction{display:block}.portrait{float:left;width:100px;height:100px;margin:0 18px 10px 0}.bio p{margin-bottom:15px}.bio .profiles{margin-top:19px}.dictum{clear:both;margin-top:20px}.home-grid>section{clear:both;padding-left:0}.highlights li{grid-template-columns:72px minmax(0,1fr)}.highlights time{font-size:13px}}
+@media(max-width:740px){.page{padding:28px 22px 38px}.site-header{margin-bottom:27px}.home-grid{display:block}.introduction{display:grid;grid-template-columns:120px minmax(0,1fr);grid-template-areas:"portrait bio" ". dictum";column-gap:20px}.portrait{grid-area:portrait;width:120px;height:120px}.bio{grid-area:bio}.dictum{grid-area:dictum}.home-grid>section{margin-top:24px;padding-left:140px}}
+@media(max-width:560px){.page{padding:25px 19px 34px}h1{font-size:30px}.site-header{margin-bottom:23px}.introduction{display:block}.portrait{float:left;width:100px;height:100px;margin:0 18px 10px 0}.bio p{margin-bottom:15px}.bio .profiles{margin-top:19px}.dictum{clear:both;margin-top:20px}.home-grid>section{clear:both;padding-left:0}.highlights li{grid-template-columns:72px minmax(0,1fr)}.highlights time{font-size:13px}}
 @media(max-width:400px){.portrait{float:none;margin:0 0 20px}}
 .writing-page{max-width:800px}.writing-page h1{margin:22px 0 28px}.back-link{font-size:15px}.post-header{margin-bottom:34px}.post-header h1{margin-bottom:8px}.post-header time{font-size:14px;color:var(--muted)}
 .writing-page .group-heading{margin-top:30px}

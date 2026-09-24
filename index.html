@@ -17,11 +17,14 @@
 </head>
 <body>
   <main class="page">
-    <h1>Ayush Nangia</h1>
+    <header class="site-header">
+      <h1>Ayush Nangia</h1>
+      <button class="mode-toggle" id="mode-toggle" type="button">Silly mode</button>
+    </header>
 
     <div class="home-grid">
     <div class="introduction">
-      <img class="portrait" src="images/ayush-llama.jpg" alt="Ayush Nangia standing beside a llama" width="220" height="220">
+      <img class="portrait" id="portrait" src="images/ayush-serious.jpg" alt="Portrait of Ayush Nangia" width="220" height="220">
       <div class="bio">
         <p>I work on agent evaluation and post-training, with a focus on long-horizon tasks.</p>
         <p>Currently, I'm a <a href="https://www.sparai.org/">SPAR fellow</a> and work with <a href="https://zhijing-jin.com/home/">Jinesis AI Lab</a> on post-training and AI safety.</p>
@@ -81,5 +84,16 @@
     showDictum();
   </script>
   {% endif %}
+  <script>
+    const modeButton = document.querySelector('#mode-toggle');
+    const portrait = document.querySelector('#portrait');
+    let silly = false;
+    modeButton.addEventListener('click', () => {
+      silly = !silly;
+      portrait.src = silly ? '/images/ayush-llama.jpg' : '/images/ayush-serious.jpg';
+      portrait.alt = silly ? 'Ayush Nangia standing beside a llama' : 'Portrait of Ayush Nangia';
+      modeButton.textContent = silly ? 'Serious mode' : 'Silly mode';
+    });
+  </script>
 </body>
 </html>
