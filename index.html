@@ -33,7 +33,7 @@
       <aside class="dictum" aria-labelledby="dictum-heading">
         <h2 id="dictum-heading">Dictum of the day</h2>
         <blockquote id="dictum-text">{{ site.data.dicta[0].text | escape }}</blockquote>
-        <p class="dictum-source" id="dictum-source"{% unless site.data.dicta[0].source %} hidden{% endunless %}>{{ site.data.dicta[0].source | escape }}</p>
+        <p class="dictum-source" id="dictum-source"{% unless site.data.dicta[0].source %} hidden{% endunless %}><a id="dictum-source-link"{% if site.data.dicta[0].url %} href="{{ site.data.dicta[0].url | escape }}"{% endif %}>{{ site.data.dicta[0].source | escape }}</a></p>
       </aside>
       {% endif %}
     </div>
@@ -71,7 +71,10 @@
       const dictum = dicta[day % dicta.length];
       document.querySelector('#dictum-text').textContent = dictum.text;
       const source = document.querySelector('#dictum-source');
-      source.textContent = dictum.source || '';
+      const link = document.querySelector('#dictum-source-link');
+      link.textContent = dictum.source || '';
+      if (dictum.url) link.href = dictum.url;
+      else link.removeAttribute('href');
       source.hidden = !dictum.source;
       setTimeout(showDictum, new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1) - now + 50);
     }
