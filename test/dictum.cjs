@@ -5,7 +5,7 @@ const { runInNewContext } = require('node:vm');
 const html = readFileSync('index.html', 'utf8');
 const script = html.match(/<script>\s*([\s\S]*?const dicta =[\s\S]*?)<\/script>/)[1]
   .replace('{{ site.data.dicta | jsonify }}', JSON.stringify([
-    { text: 'First' }, { text: 'Second', source: 'Author' },
+    { text: 'First' }, { text: 'Second', source: 'Author' }, { text: 'Third' },
   ]));
 const elements = {
   '#dictum-text': { textContent: '' },
@@ -21,10 +21,14 @@ runInNewContext(script, {
   document: { querySelector: selector => elements[selector] },
   setTimeout: (callback, delay) => timers.push({ callback, delay }),
 });
-const first = elements['#dictum-text'].textContent;
+assert.equal(elements['#dictum-text'].textContent, 'First');
 assert.ok(timers[0].delay > 0 && timers[0].delay < 61000);
 clock = new Date(2026, 8, 25, 0, 0).getTime();
 timers[0].callback();
-assert.notEqual(elements['#dictum-text'].textContent, first);
-assert.equal(elements['#dictum-source'].hidden, first === 'Second');
+assert.equal(elements['#dictum-text'].textContent, 'Second');
+assert.equal(elements['#dictum-source'].hidden, false);
+clock = new Date(2026, 8, 26, 0, 0).getTime();
+timers[1].callback();
+assert.equal(elements['#dictum-text'].textContent, 'Third');
+assert.equal(elements['#dictum-source'].hidden, true);
 console.log('Daily rotation and midnight update work');

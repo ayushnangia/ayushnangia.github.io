@@ -66,7 +66,7 @@
     const dicta = {{ site.data.dicta | jsonify }};
     function showDictum() {
       const now = new Date();
-      const day = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
+      const day = Math.max(0, Math.floor((Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) - Date.UTC(2026, 8, 24)) / 86400000));
       const dictum = dicta[day % dicta.length];
       document.querySelector('#dictum-text').textContent = dictum.text;
       const source = document.querySelector('#dictum-source');
