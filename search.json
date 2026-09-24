@@ -1,0 +1,9 @@
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+  {% assign tags = post.tags | join: ' ' %}
+  {"url": {{ post.url | relative_url | jsonify }}, "text": {{ post.title | append: ' ' | append: tags | append: ' ' | append: post.content | strip_html | normalize_whitespace | downcase | jsonify }}}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
