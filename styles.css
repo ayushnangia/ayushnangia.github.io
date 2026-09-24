@@ -11,6 +11,7 @@ a:focus-visible,.toc summary:focus-visible{outline:2px solid var(--link);outline
 .bio p{margin:0 0 17px}.bio p:first-child{margin-top:0}.bio .profiles{margin-top:27px}
 .profiles{display:flex;flex-wrap:wrap;gap:8px}.profiles span{color:var(--muted)}
 section{max-width:950px;margin:32px auto 0;padding-left:246px}
+.dictum blockquote{margin:0;font-style:italic}.dictum-source{margin:6px 0 0;color:var(--muted);font-size:14px}.dictum-source[hidden]{display:none}
 h2{font-size:18px;font-weight:700;margin:0 0 13px}
 .highlights{margin:0;padding:0;list-style:none}.highlights li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:4px;margin:0 0 4px;line-height:1.42}.highlights time{color:var(--muted);font-size:14px;white-space:nowrap}.highlights span{color:var(--ink)}
 .more-link{margin:12px 0 0;font-size:15px}
