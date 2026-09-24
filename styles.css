@@ -1,4 +1,4 @@
-:root{color-scheme:light;--ink:#292e31;--link:#394d60;--muted:#666d70}
+:root{color-scheme:light;background:#f1efe9;--ink:#292e31;--link:#394d60;--muted:#666d70}
 *{box-sizing:border-box}
 body{margin:0;background:#f1efe9;color:var(--ink);font:17px/1.52 Georgia,'Times New Roman',serif}
 .page{max-width:1120px;margin:0 auto;padding:37px 58px 48px}
