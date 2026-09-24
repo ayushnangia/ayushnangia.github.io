@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: technical
 title: XAI Overview
 date: '2025-01-23'
 permalink: /writing/xai-overview/

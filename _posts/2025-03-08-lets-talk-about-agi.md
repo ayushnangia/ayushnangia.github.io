@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: essay
 title: Let's talk about A(G)I
 date: '2025-03-08'
 permalink: /writing/lets-talk-about-agi/

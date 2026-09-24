@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: essay
 title: From Sputnik to Silicon
 date: '2025-02-02'
 permalink: /writing/from-sputnik-to-silicon/

@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: technical
 title: Vision Transformers Meet Prototypical Parts
 date: '2025-02-06'
 permalink: /writing/vision-transformers-meet-prototypical-parts/

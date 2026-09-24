@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: technical
 title: Encoder + Explanatory Decoder
 date: '2025-02-12'
 permalink: /writing/encoder-explanatory-decoder/

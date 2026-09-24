@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: technical
 title: Peeking Inside the AI Brain
 date: '2025-02-28'
 permalink: /writing/peeking-inside-the-ai-brain/

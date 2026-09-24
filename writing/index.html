@@ -20,34 +20,23 @@ permalink: /writing/
   <main class="page writing-page">
     <a class="back-link" href="/">← Ayush Nangia</a>
     <h1>Writing</h1>
-    <label class="search-label" for="writing-search">Search writing</label>
-    <input id="writing-search" class="writing-search" type="search" autocomplete="off">
-    <ul class="highlights" id="post-list">
+    <h2 id="technical">Technical</h2>
+    <ul class="highlights">
       {% for post in site.posts %}
-      <li data-url="{{ post.url | relative_url }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y %b' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+      {% if post.kind == 'technical' %}
+      <li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y %b' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+      {% endif %}
       {% endfor %}
     </ul>
-    <p id="no-results" hidden>No matches.</p>
+    <h2 id="essays" class="group-heading">Essays</h2>
+    <ul class="highlights">
+      {% for post in site.posts %}
+      {% if post.kind == 'essay' %}
+      <li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y %b' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
     <p class="more-link"><a href="/feed.xml">RSS</a></p>
   </main>
-  <script>
-    const input = document.querySelector('#writing-search');
-    const items = [...document.querySelectorAll('#post-list li')];
-    const textByUrl = new Map(items.map(item => [item.dataset.url, item.textContent.toLowerCase()]));
-    function filterPosts() {
-      const query = input.value.trim().toLowerCase();
-      let matches = 0;
-      for (const item of items) {
-        item.hidden = !!query && !textByUrl.get(item.dataset.url).includes(query);
-        if (!item.hidden) matches++;
-      }
-      document.querySelector('#no-results').hidden = matches > 0;
-    }
-    input.addEventListener('input', filterPosts);
-    fetch('/search.json').then(response => response.json()).then(posts => {
-      for (const post of posts) textByUrl.set(post.url, post.text);
-      filterPosts();
-    }).catch(() => {});
-  </script>
 </body>
 </html>

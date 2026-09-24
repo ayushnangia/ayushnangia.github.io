@@ -1,5 +1,6 @@
 ---
 layout: post
+kind: technical
 title: Discussing ProtoPNet
 date: '2025-01-24'
 permalink: /writing/discussing-protopnet/
