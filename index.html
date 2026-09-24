@@ -19,7 +19,13 @@
   <main class="page">
     <header class="site-header">
       <h1>Ayush Nangia</h1>
-      <button class="mode-toggle" id="mode-toggle" type="button">Silly mode</button>
+      <button class="mode-toggle" id="mode-toggle" type="button" aria-label="Show llama photo" title="Show llama photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M9 10h.01M15 10h.01"></path>
+          <path id="mode-mouth" d="M8 14c1.5 2 6.5 2 8 0"></path>
+        </svg>
+      </button>
     </header>
 
     <div class="home-grid">
@@ -92,7 +98,10 @@
       silly = !silly;
       portrait.src = silly ? '/images/ayush-llama.jpg' : '/images/ayush-serious.jpg';
       portrait.alt = silly ? 'Ayush Nangia standing beside a llama' : 'Portrait of Ayush Nangia';
-      modeButton.textContent = silly ? 'Serious mode' : 'Silly mode';
+      const nextPhoto = silly ? 'Show serious photo' : 'Show llama photo';
+      modeButton.setAttribute('aria-label', nextPhoto);
+      modeButton.title = nextPhoto;
+      document.querySelector('#mode-mouth').setAttribute('d', silly ? 'M8 15h8' : 'M8 14c1.5 2 6.5 2 8 0');
     });
   </script>
 </body>
